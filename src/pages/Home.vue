@@ -1,6 +1,5 @@
 <template>
   <section class="home">
-    <h1>Home</h1>
     <button
       class="btn-signup-login"
       style="width: 250px"
@@ -11,8 +10,18 @@
 
     <div class="user-info-home" v-if="user">
       <p>{{ user.fullname }}</p>
-      <p>Balance: {{ user.balance }}</p>
-      <p>Bitcoin Exchange Rate: {{ exchangeRate }}</p>
+      <div class="flex space-between">
+        <p>Balance</p>
+        <p>{{ user.balance }}</p>
+      </div>
+      <div class="flex space-between">
+        <p>Transactions That Made</p>
+        <p>{{ user.transactions.length }}</p>
+      </div>
+      <div class="flex space-between">
+        <p>Bitcoin Exchange Rate</p>
+        <p>{{ exchangeRate }}</p>
+      </div>
     </div>
 
     <section class="user-modal-area" v-if="needToBeDisplay">
@@ -20,7 +29,7 @@
     </section>
 
     <section class="user-transactions" v-if="user">
-      <UserTransactionsList :transactions="user.transactions"/>
+      <UserTransactionsList :transactions="user.transactions" />
     </section>
   </section>
 </template>
@@ -35,7 +44,7 @@ import UserTransactionsList from "../cmps/user-transactions-List.vue";
 export default {
   data() {
     return {
-      user: '',
+      user: "",
       exchangeRate: "",
       needToBeDisplay: false,
     };
@@ -44,7 +53,7 @@ export default {
     this.exchangeRate = await bitcoinService.getRate();
     let userId = userService.getLoggedinUser()._id;
     let user = await userService.getById(userId);
-    this.user = user
+    this.user = user;
   },
   methods: {
     toggleNeedToBeDisplay() {
@@ -55,7 +64,7 @@ export default {
   },
   components: {
     UserModalInfo,
-    UserTransactionsList
+    UserTransactionsList,
   },
 };
 </script>

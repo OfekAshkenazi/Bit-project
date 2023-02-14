@@ -9,14 +9,16 @@
     display: grid;
     justify-items: center;
     padding: 12px;
-    background-color: darkseagreen;
+    background-color: rgba(128, 128, 128, 0.528);
     border-radius: 10px;
     gap: em(2px);
+    font-weight: bold;
+
     img {
       border-radius: 50%;
       background-color: whitesmoke;
     }
-}
+  }
 
   .actions {
     margin-top: em(5px);
@@ -39,4 +41,26 @@
 
 .list-leave-active {
   position: absolute;
+}
+
+.custom-svg {
+  position: relative;
+  top: em(5px);
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  border: 2px solid;
+  background-color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 10px #333;
+  overflow: hidden;
+  transition: .3s;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0 0;
+  margin: 0 0;
+
+  svg {
+    transition: .3s;
+  }
 }

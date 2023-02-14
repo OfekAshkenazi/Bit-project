@@ -2,8 +2,24 @@
     display: grid;
     justify-items: start;
     gap: 5px;
-    padding: 10px;
-    background-color: rgb(249, 197, 101);
+    padding: em(10px);
+    background-color: rgba(128, 128, 128, 0.616);
+    border-radius: em(7px);
+
+    fieldset {
+        border-radius: em(7px);
+        border: 1.5px solid black;
+
+        input {
+            font-weight: bold;
+            font-family: sans-serif;
+            font-size: larger;
+            border: none;
+
+        }
+    }
+
+
 
     button {
         justify-self: end;

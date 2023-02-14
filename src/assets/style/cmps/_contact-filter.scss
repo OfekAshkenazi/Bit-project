@@ -1,7 +1,14 @@
-.car-filter {
+.contact-filter {
     display: flex;
     align-items: center;
     gap: 10px;
     padding: 10px;
-    background-color: darkgray;
+    max-width: fit-content;
+    border-radius: em(7px);
+
+    legend {
+        font-weight: bold;
+        font-family: sans-serif;
+        font-size: larger;
+    }
 }

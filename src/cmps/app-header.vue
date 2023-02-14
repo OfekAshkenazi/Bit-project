@@ -32,7 +32,7 @@ a {
   font-weight: bold;
 }
 .router-link-active {
-  background-color: #0ecb81;
+  background-color: #ee7f17;
   color: black;
 }
 </style>

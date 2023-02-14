@@ -38,7 +38,7 @@ export default {
           {
             label: this.marketPrice.name,
             data: this.marketPrice.values.map((price) => price.y),
-            backgroundColor: "blue",
+            backgroundColor: "orange",
           },
         ],
       },

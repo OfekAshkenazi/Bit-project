@@ -8,7 +8,7 @@
       <RouterLink to="/contact">
         <button class="action-btn">Back</button>
       </RouterLink>
-      <button v-on:click="toggleTransactionModal">
+      <button class="details" v-on:click="toggleTransactionModal">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="25"

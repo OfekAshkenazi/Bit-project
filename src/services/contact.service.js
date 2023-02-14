@@ -168,8 +168,9 @@ function getEmptyTransaction() {
     {
         toId: "",
         to: "",
-        at: Date.now(),
+        at: new Date().toString().slice(16, 25),
         amount: 0,
+        _id: utilService.makeId()
     }
     return transaction
 }

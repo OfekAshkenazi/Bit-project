@@ -1,16 +1,23 @@
 <template  v-if="contactToEdit">
   <h1>{{ getWellcomePara }}</h1>
   <form @submit.prevent="onSave" class="contact-edit">
-    <input type="text" v-model="contactToEdit.name" placeholder="name" />
-    <input type="text" v-model="contactToEdit.email" placeholder="email" />
-    <input
-      type="text"
-      v-model.number="contactToEdit.phone"
-      placeholder="phone"
-    />
+    <fieldset>
+      <legend>Name</legend>
+      <input type="text" v-model="contactToEdit.name"  />
+    </fieldset>
+    <fieldset>
+      <legend>Email</legend>
+      <input type="text" v-model="contactToEdit.email" />
+    </fieldset>
+    <fieldset>
+      <legend>Phone</legend>
+      <input
+        type="text"
+        v-model.number="contactToEdit.phone"
+      />
+    </fieldset>
     <button>Save</button>
   </form>
-  <img :src="contactToEdit.imgUrl" alt="" />
 </template>
 
 <script>

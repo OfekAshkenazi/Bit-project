@@ -1,4 +1,21 @@
 .home {
     display: grid;
     align-items: center;
+    justify-items: center;
+    padding: em(7px) em(0px);
+    color: whitesmoke;
+    font-weight: bold;
+    font-family: sans-serif;
+
+    .user-info-home {
+        background-color: #FFB100;
+        padding: em(7px) em(7px);
+        border-radius: em(7px);
+        width: em(360px);
+        p {
+            margin: em(2px) em(0px);
+        }
+    }
+
+
 }

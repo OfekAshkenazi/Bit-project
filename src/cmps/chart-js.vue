@@ -1,9 +1,6 @@
 <template>
-<div class="" v:if="marketPrice">
   <Line :data="lineChartData" :options="lineChartOptions" />
-</div>
 </template>
-
 <script lang="ts">
 import {
   Chart as ChartJS,
@@ -27,6 +24,7 @@ ChartJS.register(
   Legend
 )
 export default {
+  name: 'App',
   components: {
     Line
   },
@@ -35,14 +33,20 @@ export default {
     return {
       lineChartOptions: {
         responsive: true,
+        maintainAspectRatio: false,
       },
       lineChartData: {
-        labels: this.marketPrice.values.map((d: { x: number }) => new Date(d.x * 1000).toLocaleDateString()),
+        labels: this.marketPrice.values
+          .filter((_, index) => index % 15 === 0)
+          .map((d: { x: number }) => new Date(d.x * 1000).toLocaleDateString().split(" ").slice(0, 2).join(" ")),
         datasets: [
           {
             label: this.marketPrice.name,
-            data: this.marketPrice.values.map((d: { y: any }) => d.y ),
-            borderColor: 'blue',
+            data: this.marketPrice.values
+              .filter((_, index) => index % 15 === 0)
+              .map((d: { y: any }) => d.y),
+            borderColor: '#3cba9f',
+            fill: false
           }
         ]
       }

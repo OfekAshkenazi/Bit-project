@@ -1,10 +1,9 @@
-<template>
-  <h2>hello</h2>
+<template v:if="marketPrice">
   <div class="barChart" v:if="marketPrice">
-    <LineChart :marketPrice="this.marketPrice" />
+    <LineChart :marketPrice="marketPrice" />
   </div>
   <div class="barChart" v:if="marketPrice">
-    <BarChart :marketPrice="this.marketPrice" />
+    <BarChart :marketPrice="marketPrice" />
   </div>
 </template>
 
@@ -22,8 +21,12 @@ export default {
     };
   },
   async created() {
-    (this.marketPrice = await bitcoinService.getMarketPriceHistory()),
-      (this.blockSize = await bitcoinService.getAvgBlockSize());
+    try {
+      (this.marketPrice = await bitcoinService.getMarketPriceHistory()),
+        (this.blockSize = await bitcoinService.getAvgBlockSize());
+    } catch (err) {
+      console.log(err);
+    }
   },
   components: {
     LineChart,
