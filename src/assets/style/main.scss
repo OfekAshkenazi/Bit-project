@@ -1,0 +1,33 @@
+// SETUP
+@import 'setup/functions';
+@import 'setup/variables';
+@import 'setup/mixins';
+@import 'setup/typography.scss';
+
+///BASICES
+@import 'basics/helpers';
+@import 'basics/base';
+@import 'basics/layout';
+
+@import 'cmps/app-header.scss';
+@import 'cmps/app-footer.scss';
+@import 'cmps/contact-list.scss';
+@import 'cmps/contact-preview.scss';
+@import 'cmps/contact-details.scss';
+@import 'cmps/contact-edit.scss';
+@import 'cmps/contact-filter.scss';
+@import 'cmps/user-msg.scss';
+@import 'cmps/login-signup-form.scss';
+@import 'cmps/home.scss';
+
+
+
+
+// #app {
+//     max-width: 1280px;
+//     margin: 0 auto;
+//     font-weight: normal;
+//   }
+  
+  
+  

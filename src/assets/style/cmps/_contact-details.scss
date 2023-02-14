@@ -1,0 +1,19 @@
+.contact-details {
+    display: grid;
+    justify-items: center;
+    max-width: em(280px);
+    margin: em(15px) auto;
+    padding: 12px;
+    background-color: darkseagreen;
+    border-radius: 10px;
+    gap: em(2px);
+    img {
+      background-color: whitesmoke;
+    }
+    
+    a {
+        margin-top: em(5px);
+        justify-self: center;
+    }
+}
+

@@ -1,0 +1,42 @@
+.contact-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: em(10px);
+  padding: em(15px) em(0px) em(15px) em(0px);
+  list-style-type: none;
+
+  .contact-preview {
+    display: grid;
+    justify-items: center;
+    padding: 12px;
+    background-color: darkseagreen;
+    border-radius: 10px;
+    gap: em(2px);
+    img {
+      border-radius: 50%;
+      background-color: whitesmoke;
+    }
+}
+
+  .actions {
+    margin-top: em(5px);
+    display: flex;
+    align-items: center;
+    gap: em(5px);
+  }
+}
+
+.list-move,
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+}
+
+.list-leave-active {
+  position: absolute;
+}
