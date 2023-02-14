@@ -1,9 +1,10 @@
-.contact-list {
+ul.contact-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 260px));
   gap: em(10px);
   padding: em(15px) em(0px) em(15px) em(0px);
   list-style-type: none;
+  justify-content: center;
 
   .contact-preview {
     display: grid;

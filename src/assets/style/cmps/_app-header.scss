@@ -8,6 +8,13 @@ header {
     background-color: $clrSecondery;
     color: whitesmoke;
 
+.user-info {
+    @media (max-width: 600px) {
+        display: none;
+    }
+}
+
+
     a {
         margin-inline-start: 1em;
     }
