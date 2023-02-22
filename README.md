@@ -1,29 +1,33 @@
-# bits
+# MisterCoin
 
-This template should help get you started developing with Vue 3 in Vite.
+in this app you can transfer bitcoins to your fake contacts, CRUDL them and get informtion about the current bitcoin value, and the market-price.
+[Take a look, it's on Github pages]( https://ofekashkenazi.github.io/Mister_coin/ "Github pages link")
 
-## Recommended IDE Setup
+#### Technologies
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- Vue 3
+- Vue chart.js
+- Vue-Router
+- Vuex
+- Sass
+- Vue CLI & Github pages
 
-## Customize configuration
+## Features
+Please feel free to take a look of the different components of the website - [Showcase](#showcase)
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- Simple authentication - session storage.
+- HTTP request for Market price, bitcoin value and more.
+- CRUDL of contacts.
+- Responsive.
 
-## Project Setup
-
-```sh
-npm install
+## Getting started
+Clone the project or dowload the files on top.
 ```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
+git clone https://github.com/OfekAshkenazi/Bit-project.git
 ```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
+Open the terminal and enter the following line to run it locally on your computer:
 ```
+npm run dev 
+```
+Runs the app in the development mode.
+Open http://localhost:3000 to view it in the browser.
